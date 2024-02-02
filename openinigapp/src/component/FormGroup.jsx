@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../pages/SignIn.css';
-//import { useAuth0 } from '@auth0/auth0-react';
 
-const FormGroup = () => {
+import {auth,provider} from "./config/config";
+import {signInWithPopup} from "firebase/auth";
+const FormGroup = ({value,setValue,photo,setPhoto}) => {
 
- // const {loginWithRedirect} = useAuth0()
+
+  const handleClick =()=>{
+      signInWithPopup(auth,provider).then((data)=>{
+          localStorage.setItem('data',data.user)
+        
+          setValue(data.user.email)
+          localStorage.setItem("email",data.user.email)
+          localStorage.setItem("photo",data.user.photoURL)
+          
+      })
+  }
+
+  useEffect(()=>{
+      setValue(localStorage.getItem('email'))
+    
+  },[])
+
   
   return (
     <div className="formgroup__container">
@@ -16,7 +33,7 @@ const FormGroup = () => {
       <div className="signin__with__buttons">
         <button
           className="siginin__google btn__primary"
-        //  onClick={loginWithRedirect}
+         onClick={handleClick}
         >
           Sign in with Google
         </button>
