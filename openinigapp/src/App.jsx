@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import './App.css'
 import SignIn from './pages/Sign'
+import { Sidebar } from './component/Sidebar'
 
 function App() {
  
 
   return (
-   <main className="container">
-    <SignIn/>
-   </main>
+   <div >
+    {/* <SignIn/> */}
+    <Sidebar/>
+   </div>
   )
 }
 

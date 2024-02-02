@@ -11,11 +11,22 @@
 }
 
 .logo {
-    font-size: var(--fs-l);
-    font-weight: 700;
-    font-family: var(--ff-poppins);
-    color: var(--color-white);
+    width: 82.82px;
+    height: 22.04px;
+    top: 83.71px;
+    left: 59.03px;
+    border: 6px
+    
 }
+  .line{
+    width: 82.82px;
+    height: 22.04px;
+    top: 63.71px;
+    left: 30.03px;
+    border: 6px;
+    position: absolute;
+    
+  }
 
 .form__container {
     width: 100%;
