@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Dashboard.css";
-
-const DashHeader = () => {
+import notification from '../assets/notifications.png'
+const Navbar = () => {
   const [photo,setPhoto] = useState("")
   const pic = localStorage.getItem('photo')
     
@@ -13,16 +13,17 @@ const DashHeader = () => {
   
   return (
     <div className="dash__header__bar">
-      <h2 className="dahsboard">Dashboard</h2>
+      <h2 className="dahsboard">Upload CSV</h2>
 
       <div className="header__right">
         
 
         <button className="bell__icon">
-          <i className="ri-notification-2-line"></i>
+          <i className="ri-notification-2-line"> <img src={notification} alt="notification"/></i>
         </button>
 
         <div className="profile__icon">
+      
         <img src={photo} alt="userimage" />
 
           <ul
@@ -49,4 +50,4 @@ const DashHeader = () => {
   );
 };
 
-export default DashHeader;
+export default Navbar;

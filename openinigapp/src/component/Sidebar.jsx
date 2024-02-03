@@ -8,6 +8,7 @@ import Ticket from "../assets/Ticket.png";
 import Calender from "../assets/Calendar.png";
 import Document from "../assets/Document.png";
 import DashHeader from './Navbar';
+import Navbar from './Navbar';
 
 export const Sidebar = () => {
   return (
@@ -71,7 +72,7 @@ export const Sidebar = () => {
         </li>
       </ul>
     </div>
-<DashHeader />
+<Navbar />
       </div>
     
   );
